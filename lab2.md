@@ -55,7 +55,7 @@ echo "Disk Space: $(df -h)"
 greet.sh
 ```
 
-<img width="807" height="461" alt="image" src="https://github.com/user-attachments/assets/d6511de5-21f9-4f89-9155-563cda84c8d7" />
+<img width="537" height="25" alt="image" src="https://github.com/user-attachments/assets/68ca309b-a459-4fbb-b7c1-99f226eb2477" />
 
 **Код скрипта:**
 
@@ -64,6 +64,10 @@ greet.sh
 
 echo "Hello, $(whoami)!"
 ```
+
+<img width="1119" height="623" alt="image" src="https://github.com/user-attachments/assets/c260f622-98c2-45c1-ae0d-f85ad4006759" />
+
+<img width="595" height="76" alt="image" src="https://github.com/user-attachments/assets/6ab5a8b7-3e75-4175-81da-45714fe3f177" />
 
 ---
 
@@ -100,6 +104,10 @@ else
 fi
 ```
 
+<img width="1003" height="442" alt="image" src="https://github.com/user-attachments/assets/560bbc6d-fc53-476a-b70a-0fa0c23652ec" />
+
+<img width="674" height="75" alt="image" src="https://github.com/user-attachments/assets/9492ef1a-f5b9-4018-b38f-77dd04ba4fc7" />
+
 ---
 
 ## 3. Скрипт подсчета совпадений слова в файле (`count_word.sh`)
@@ -135,6 +143,19 @@ count=$(grep -o -i "$word" "$file" | wc -l)
 
 echo "The word '$word' appears $count times in '$file'."
 ```
+<img width="627" height="456" alt="image" src="https://github.com/user-attachments/assets/9dab432b-6e4a-4e11-8539-6a5aad0e84f4" />
+
+
+**3. Сделайте исполняемым и протестируйте:**
+
+```bash
+sudo chmod +x /usr/local/bin/count_word.sh
+# Тест (создадим временный файл со словами для проверки):
+echo "Apple banana apple orange APPLE" > test_words.txt
+count_word.sh test_words.txt apple
+```
+
+<img width="548" height="110" alt="image" src="https://github.com/user-attachments/assets/f70a174e-2d4d-47f9-9823-d5dfeae5f1a3" />
 
 ---
 
@@ -178,18 +199,21 @@ else
     done
 fi
 ```
+<img width="526" height="628" alt="image" src="https://github.com/user-attachments/assets/b708ee60-db23-42cf-a441-928381cb3453" />
+
+**3. Сделайте исполняемым и протестируйте:**
+```bash
+sudo chmod +x /usr/local/bin/delete_empty_files.sh
+
+# Тест (создадим тестовую папку и пустые файлы):
+mkdir test_dir
+touch test_dir/empty1.txt test_dir/empty2.txt test_dir/not_empty.txt
+echo "data" > test_dir/not_empty.txt
+
+# Запуск скрипта
+delete_empty_files.sh test_dir
+```
+
+<img width="708" height="265" alt="image" src="https://github.com/user-attachments/assets/6595e4aa-9e04-4275-a76f-5c7f75f89162" />
 
 
-
-
-
-
-
-<img width="537" height="25" alt="image" src="https://github.com/user-attachments/assets/68ca309b-a459-4fbb-b7c1-99f226eb2477" />
-
-<img width="1119" height="623" alt="image" src="https://github.com/user-attachments/assets/c260f622-98c2-45c1-ae0d-f85ad4006759" />
-<img width="595" height="76" alt="image" src="https://github.com/user-attachments/assets/6ab5a8b7-3e75-4175-81da-45714fe3f177" />
-<img width="1003" height="442" alt="image" src="https://github.com/user-attachments/assets/560bbc6d-fc53-476a-b70a-0fa0c23652ec" />
-<img width="674" height="75" alt="image" src="https://github.com/user-attachments/assets/9492ef1a-f5b9-4018-b38f-77dd04ba4fc7" />
-<img width="633" height="185" alt="image" src="https://github.com/user-attachments/assets/3b51eae9-7275-4bfb-96ac-c2e1412960b4" />
-<img width="555" height="658" alt="image" src="https://github.com/user-attachments/assets/87810f42-e4a9-4cf5-bc13-a18d160c5938" />
