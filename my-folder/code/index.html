@@ -1,0 +1,319 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Способ оплаты — Тест</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-50 text-gray-900 font-sans">
+
+  <div class="min-h-screen flex items-center justify-center p-4">
+
+    <div class="bg-white rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-gray-100 p-8 max-w-lg w-full">
+
+      <!-- Предупреждение -->
+      <div class="mb-6 rounded-xl border border-yellow-300 bg-yellow-50 p-4">
+        <div class="flex gap-3">
+          <div class="text-yellow-600 text-xl">⚠️</div>
+
+          <div>
+            <h3 class="font-bold text-yellow-800 mb-1">
+              Тестовый режим
+            </h3>
+
+            <p class="text-sm text-yellow-700 leading-relaxed">
+              Это демонстрационная проверка формы оплаты.
+              Не вводите настоящие данные банковской карты.
+              Используйте только тестовые данные.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <h2 class="text-3xl font-bold mb-8 tracking-tight">
+        Способ оплаты
+      </h2>
+
+      <div class="flex justify-between items-start mb-6">
+
+        <div>
+          <h3 class="text-[15px] font-semibold text-gray-900 mb-2.5">
+            Кредитная или дебетовая карта
+          </h3>
+
+          <div class="flex space-x-2">
+
+            <div class="w-11 h-7 bg-white border border-gray-200 rounded flex items-center justify-center">
+              <span class="text-blue-800 font-bold italic text-[11px] tracking-tighter">
+                VISA
+              </span>
+            </div>
+
+            <div class="w-11 h-7 bg-white border border-gray-200 rounded flex items-center justify-center">
+              <svg width="24" height="16" viewBox="0 0 24 16">
+                <circle cx="9" cy="8" r="5.5" fill="#eb001b" opacity="0.9"/>
+                <circle cx="15" cy="8" r="5.5" fill="#f79e1b" opacity="0.9"/>
+              </svg>
+            </div>
+
+            <div class="w-11 h-7 bg-[#2E77BC] rounded flex items-center justify-center">
+              <span class="text-white font-bold text-[7px] tracking-wider">
+                AMEX
+              </span>
+            </div>
+
+          </div>
+        </div>
+
+        <svg
+          class="w-6 h-6 text-gray-500 mt-0.5"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.5"
+        >
+          <rect x="3" y="11" width="18" height="11" rx="2"/>
+          <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+        </svg>
+
+      </div>
+
+
+      <!-- Форма -->
+      <form
+        class="space-y-5"
+        action="/submit"
+        method="POST"
+        onsubmit="return validateForm();"
+      >
+
+        <!-- Номер карты -->
+        <div>
+
+          <label
+            for="cc-number"
+            class="block text-[14px] font-bold text-gray-900 mb-2"
+          >
+            Номер карты
+          </label>
+
+          <div class="relative">
+
+            <div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none">
+
+              <svg
+                class="h-5 w-5 text-gray-400"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+              >
+                <rect x="2" y="5" width="20" height="14" rx="2"/>
+                <path d="M2 10h20"/>
+              </svg>
+
+            </div>
+
+            <input
+              id="cc-number"
+              name="card_number"
+              type="text"
+              inputmode="numeric"
+              autocomplete="off"
+              placeholder="0000 0000 0000 0000"
+              maxlength="19"
+              required
+              class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all outline-none text-gray-800 font-medium text-[15px] placeholder-gray-400 pl-11"
+            >
+
+          </div>
+        </div>
+
+
+        <!-- Срок + CVV -->
+        <div class="grid grid-cols-2 gap-4">
+
+          <div>
+
+            <label
+              for="cc-exp"
+              class="block text-[14px] font-bold text-gray-900 mb-2"
+            >
+              Срок действия
+            </label>
+
+            <input
+              id="cc-exp"
+              name="expiry"
+              type="text"
+              inputmode="numeric"
+              autocomplete="off"
+              placeholder="ММ/ГГ"
+              maxlength="5"
+              required
+              class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all outline-none text-gray-800 font-medium text-[15px] placeholder-gray-400"
+            >
+
+          </div>
+
+
+          <div>
+
+            <label
+              for="cc-csc"
+              class="block text-[14px] font-bold text-gray-900 mb-2"
+            >
+              Код безопасности
+            </label>
+
+            <input
+              id="cc-csc"
+              name="cvv"
+              type="password"
+              inputmode="numeric"
+              autocomplete="off"
+              maxlength="4"
+              required
+              placeholder="•••"
+              class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all outline-none text-gray-800 font-medium text-[15px] placeholder-gray-400 tracking-widest"
+            >
+
+          </div>
+
+        </div>
+
+
+        <!-- Сохранение карты -->
+        <div class="pt-4 flex items-start">
+
+          <div class="flex items-center h-5 mt-0.5">
+
+            <input
+              id="save-card"
+              type="checkbox"
+              class="h-4 w-4 text-blue-600 border-gray-300 rounded cursor-pointer"
+            >
+
+          </div>
+
+          <div class="ml-3">
+
+            <label
+              for="save-card"
+              class="font-semibold text-gray-900 text-[14px] cursor-pointer"
+            >
+              Сохранить карту для будущих заказов
+            </label>
+
+            <p class="text-gray-500 text-[13px] mt-1.5 leading-relaxed pr-4">
+              В тестовом режиме данные карты не сохраняются.
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <!-- Кнопка -->
+        <div class="pt-6">
+
+          <button
+            type="submit"
+            class="w-full bg-[#0066FF] hover:bg-blue-700 active:bg-blue-800 text-white font-semibold py-3.5 px-4 rounded-xl shadow-sm transition-all focus:outline-none focus:ring-4 focus:ring-blue-500/20 text-[16px]"
+          >
+            Проверить оплату
+          </button>
+
+        </div>
+
+      </form>
+
+    </div>
+
+  </div>
+
+
+  <script>
+
+    const ccNumber = document.getElementById('cc-number');
+    const ccExp = document.getElementById('cc-exp');
+    const ccCsc = document.getElementById('cc-csc');
+
+
+    ccNumber.addEventListener('input', function(e) {
+
+      let value = e.target.value.replace(/\D/g, '');
+
+      if (value.length > 16) {
+        value = value.slice(0, 16);
+      }
+
+      e.target.value = value
+        .replace(/(.{4})/g, '$1 ')
+        .trim();
+
+    });
+
+
+    ccExp.addEventListener('input', function(e) {
+
+      let value = e.target.value.replace(/\D/g, '');
+
+      if (value.length > 4) {
+        value = value.slice(0, 4);
+      }
+
+      if (value.length > 2) {
+        e.target.value =
+          value.slice(0, 2) + '/' + value.slice(2);
+      } else {
+        e.target.value = value;
+      }
+
+    });
+
+
+    ccCsc.addEventListener('input', function(e) {
+
+      let value = e.target.value.replace(/\D/g, '');
+
+      if (value.length > 4) {
+        value = value.slice(0, 4);
+      }
+
+      e.target.value = value;
+
+    });
+
+
+    function validateForm() {
+
+      const card = ccNumber.value.replace(/\s/g, '');
+      const expiry = ccExp.value;
+      const cvv = ccCsc.value;
+
+      if (card.length !== 16) {
+        alert('Для теста введите 16 цифр номера карты.');
+        return false;
+      }
+
+      if (!/^\d{2}\/\d{2}$/.test(expiry)) {
+        alert('Введите срок действия в формате ММ/ГГ.');
+        return false;
+      }
+
+      if (cvv.length < 3 || cvv.length > 4) {
+        alert('Код безопасности должен содержать 3–4 цифры.');
+        return false;
+      }
+
+      return true;
+    }
+
+  </script>
+
+</body>
+</html>
