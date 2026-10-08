@@ -84,3 +84,5 @@ http://127.0.0.1:5000/
    > ⚠️ Сервер не отвечает
    и информацию о том, что платёж не был завершён.
 Так была проверена связь между HTML-интерфейсом и Flask-сервером.
+
+<img width="577" height="773" alt="image" src="https://github.com/user-attachments/assets/2dcbb04c-eae3-4772-b4b9-02cd692b6e89" />
