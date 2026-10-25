@@ -1,4 +1,4 @@
-# Lab 5. User Management in Linux
+<img width="497" height="613" alt="image" src="https://github.com/user-attachments/assets/919c1636-8eb0-4280-b92e-5d322b34a267" /># Lab 5. User Management in Linux
 Управление пользователями в Linux включает создание, изменение и администрирование учетных записей пользователей и групп в системе. Это обеспечивает безопасный доступ, а также установку надлежащих прав доступа к файлам, каталогам и процессам.
 ## К числу основных задач относятся:
 
@@ -50,4 +50,26 @@ pkill -KILL -u user1
 sudo deluser --remove-home user1
 ````
 <img width="666" height="616" alt="image" src="https://github.com/user-attachments/assets/d93fb126-2856-47ec-9d24-b7ec7aa3aa63" />
+
+# Задание : 
+* Создайте двух пользователей и одну группу.
+* Добавьте одного из пользователей в эту группу и проверьте его доступ к общим файлам.
+* Настройте права доступа к файлам с помощью команд chown, chgrp и chmod.
+* Опишите, как права доступа влияют на совместную работу и изоляцию пользователей друг от друга.
+--- 
+# Создание группыы:
+```terminal
+sudo groupadd devgroup
+````
+<img width="450" height="61" alt="image" src="https://github.com/user-attachments/assets/78578897-036d-4ad8-ba25-b60d27f8047e" />
+
+# Создание пользователей : 
+
+```terminal
+sudo adduser maksat1
+sudo adduser maksat2 
+````
+
+<img width="497" height="613" alt="image" src="https://github.com/user-attachments/assets/00d4d9a1-7181-4f61-8089-d56f6d30ca48" />
+
 
