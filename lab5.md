@@ -72,4 +72,35 @@ sudo adduser maksat2
 
 <img width="497" height="613" alt="image" src="https://github.com/user-attachments/assets/00d4d9a1-7181-4f61-8089-d56f6d30ca48" />
 
+# Добавления пользователя в группу : 
+```terminal
+sudo usermod -aG devgroup maksat1
+````
+
+<img width="547" height="49" alt="image" src="https://github.com/user-attachments/assets/78d2b3df-0779-4cbc-acb6-4f47b80da0e6" />
+
+
+# Создание директории: 
+
+<img width="561" height="653" alt="image" src="https://github.com/user-attachments/assets/61dccd9e-0b66-4095-9b29-cbce73034c6c" />
+
+# Проверка :
+
+### Для maksat1
+```terminal
+su - maksat1
+echo "Тесn тест работы подлючения " > /srv/shared_project/notes.txt
+cat /srv/shared_project/notes.txt
+exit
+````
+
+<img width="966" height="145" alt="image" src="https://github.com/user-attachments/assets/19e9bc49-7072-433b-af95-a6a15dca4f97" />
+
+### Для maksat2 
+```terminal
+su maksat2
+echo "Тесn тест работы подлючения " > /srv/shared_project/notes.txt
+exit
+````
+<img width="982" height="293" alt="image" src="https://github.com/user-attachments/assets/529bbe9a-646e-4d78-809f-e7420202c624" />
 
