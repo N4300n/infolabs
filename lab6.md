@@ -19,3 +19,10 @@ ls -la file.txt
 ````
 
 <img width="551" height="410" alt="image" src="https://github.com/user-attachments/assets/9593e067-85c0-4e1b-ac4f-f6955440ab31" />
+
+# Измените права доступа, используя числовую нотацию :
+```terminal
+chmod 754 file.txt
+````
+<img width="560" height="483" alt="image" src="https://github.com/user-attachments/assets/cf4ac131-a2be-446f-8642-afbf8f58e851" />
+
