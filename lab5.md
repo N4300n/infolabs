@@ -15,6 +15,29 @@ sudo adduser user1
 ```
 <img width="550" height="447" alt="image" src="https://github.com/user-attachments/assets/66c1c654-e37c-408b-b553-a19104366eb4" />
 
+# Verify the user creation by running:
+```terminal
+cat /etc/passwd
+```
+<img width="662" height="575" alt="image" src="https://github.com/user-attachments/assets/b1b1e1ef-49cb-46d0-9135-ea35539c0f01">
+
+# Login as new user:
+
+<img width="752" height="440" alt="image" src="https://github.com/user-attachments/assets/f34c4740-9f70-46a4-9039-7ee6fbd1ca47" />
+
+---
+```terminal
+whoami
+```
+<img width="607" height="111" alt="image" src="https://github.com/user-attachments/assets/95aa28b9-84fb-485c-851a-d799eacf9a22" />
+
+# Change personal information
+```terminal
+chfn
+```
+<img width="482" height="177" alt="image" src="https://github.com/user-attachments/assets/21b207fa-e3c9-4a2d-bcf2-f01f92d413bc" />
+
+
 
 <img width="470" height="20" alt="image" src="https://github.com/user-attachments/assets/d83ff3c1-ac62-431c-a819-585060b88d1a" />
 <img width="497" height="40" alt="image" src="https://github.com/user-attachments/assets/a53cf936-b62e-433b-92fb-e45693023249" />
