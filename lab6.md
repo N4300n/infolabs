@@ -1,7 +1,21 @@
 # Lab 6. Permissions in Linux
 Права доступа в Linux определяют, кто может получать доступ к файлам и каталогам, изменять их или выполнять их. Грамотное управление правами доступа обеспечивает конфиденциальность и целостность данных, а также безопасность системы.
 
-## Types of permissions:
-* Read (r): View file contents or list directory contents.
-* Write (w): Modify file contents or add/delete files in a directory.
-* Execute (x): Run executable files or access directory content.
+## Типы разрешений:
+* Чтение (r): Просмотр содержимого файла или списка содержимого каталога.
+* Запись (w): Изменение содержимого файла либо добавление или удаление файлов в каталоге.
+* Выполнение (x): Запуск исполняемых файлов или получение доступа к содержимому каталога.
+
+# Создание нового файла : 
+```terminal
+touch file.txt
+````
+<img width="373" height="55" alt="image" src="https://github.com/user-attachments/assets/7a2618b7-5b7b-4642-b98a-127138e97c85" />
+
+# Права доступа к просмотру :
+
+```terminal
+ls -la file.txt
+````
+
+<img width="551" height="410" alt="image" src="https://github.com/user-attachments/assets/9593e067-85c0-4e1b-ac4f-f6955440ab31" />
