@@ -9,7 +9,13 @@
 * Управление правами доступа: включение пользователей в группы, а также настройка прав доступа к файлам и каталогам (с использованием команд `chmod`, `chown`, `chgrp`).
 * Мониторинг пользователей: отслеживание пользователей, работающих в системе в данный момент, с помощью команд `who` или `w`.
 * Информация о пользователях и группах хранится в таких конфигурационных файлах, как `/etc/passwd`, `/etc/shadow` и `/etc/group`.
-<img width="476" height="513" alt="image" src="https://github.com/user-attachments/assets/d574f59b-13ed-4ecb-a708-f62d72f40b3c" />
+# Creating new user. 
+```terminal
+sudo adduser user1
+```
+<img width="550" height="447" alt="image" src="https://github.com/user-attachments/assets/66c1c654-e37c-408b-b553-a19104366eb4" />
+
+
 <img width="470" height="20" alt="image" src="https://github.com/user-attachments/assets/d83ff3c1-ac62-431c-a819-585060b88d1a" />
 <img width="497" height="40" alt="image" src="https://github.com/user-attachments/assets/a53cf936-b62e-433b-92fb-e45693023249" />
 <img width="235" height="21" alt="image" src="https://github.com/user-attachments/assets/4ffd53ee-e9e1-4d85-83c1-f98c619e8915" />
