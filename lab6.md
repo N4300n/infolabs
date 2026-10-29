@@ -47,3 +47,6 @@ chmod 754 file.txt
 <img width="682" height="289" alt="image" src="https://github.com/user-attachments/assets/24af0284-8e0f-404d-83a3-eb07ca24d5c6" />
 
 ### Задание 2: 
+
+<img width="552" height="595" alt="image" src="https://github.com/user-attachments/assets/648427a3-62bc-4d02-9670-d4177c7b15f2" />
+
